@@ -1,0 +1,511 @@
+//color
+
+$themecol: rgb(15, 124, 197);
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+#menubox,
+#closebox {
+  display: none;
+}
+
+.navhead {
+  position: fixed;
+  top: 0%;
+  height: 60px;
+  width: 100%;
+  padding: 1.5rem 2.6rem;
+  z-index: 1000;
+  background-color: rgba(51, 52, 53, 0.7);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 12.3rem;
+    a {
+      text-decoration: none;
+      color: white;
+      font: normal bolder 1.2rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      transition: color 0.3s linear;
+      &:hover {
+        color: rgb(0, 195, 255);
+      }
+    }
+  }
+}
+
+#container {
+  overflow-x: hidden;
+  #home {
+    height: 100vh;
+    background: url(../images/tata.png) no-repeat scroll 100% 10%;
+    background-size: contain;
+    position: relative;
+    .bg-color {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    h1 {
+      font: normal bolder 4.5rem "Times New Roman", "sans-serif";
+      position: absolute;
+      top: 26%;
+      left: 10%;
+      color: $themecol;
+      z-index: 1;
+    }
+    #homepara {
+      height: 80px;
+      max-width: 35%;
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      color: rgba(255, 255, 255, 1);
+      z-index: 1;
+      p {
+        word-break: break-all;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .rest {
+    min-height: 100vh;
+    width: 85%;
+    padding: 5.5rem 2.5rem;
+    margin: auto;
+    text-align: center;
+    header {
+      h2 {
+        text-align: center;
+        font: normal bolder 2.5rem "Times New Roman", "sans-serif";
+        color: $themecol;
+        padding: 1rem;
+      }
+    }
+  }
+
+  #two,
+  #three {
+    section {
+      p {
+        padding: 1rem 0rem;
+        font: normal normal 1.3rem "Times New Roman", "sans-serif";
+        word-break: break-all;
+        color: rgb(66, 62, 62);
+        line-height: 25px;
+      }
+    }
+  }
+  #four {
+    table {
+      margin: auto;
+      text-align: center;
+      border-collapse: collapse;
+      th {
+        font-size: 1.3rem;
+        padding: 1rem 1.5rem;
+        background-color: rgb(38, 39, 39);
+        color: white;
+      }
+      td {
+        padding: 1rem 1.2rem;
+        color: rgba(0, 0, 0, 0.9);
+      }
+      td,
+      th {
+        border: 1px solid rgba(0, 0, 0, 0.7);
+
+        a {
+          text-decoration: none;
+          color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+
+  #five {
+    header {
+      p {
+        i {
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+    form {
+      width: 40%;
+      margin: 4rem auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      textarea,
+      input {
+        padding: 0.6rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+        border-radius: 0.5rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        border: 1px solid $themecol;
+        &:focus {
+          outline: 2px solid $themecol;
+          outline-offset: 2px;
+        }
+      }
+      textarea {
+        height: 100px;
+      }
+      input[type="submit"] {
+        color: white;
+        background-color: $themecol;
+        font-weight: bolder;
+      }
+    }
+  }
+
+  #six {
+    display: grid;
+    align-items: center;
+    .logos {
+      a {
+        padding: 2px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+footer {
+  height: 50px;
+  background-color: $themecol;
+  color: white;
+  text-align: center;
+  display: grid;
+  align-items: center;
+}
+
+@media screen and (max-width: 1190px) {
+  #container {
+    #home {
+      background-size: cover;
+      h1 {
+        font-size: 3.7rem;
+      }
+    }
+  }
+  #menubox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    height: 30px;
+    width: 30px;
+    display: block;
+    background: url(../images/menu.png);
+    background-size: contain;
+    z-index: 1000;
+  }
+  .navhead {
+    display: none;
+  }
+
+  .navheadside {
+    height: 100%;
+    width: 100vw;
+    z-index: 1000;
+    background-color: rgba(51, 52, 53, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      a {
+        text-decoration: none;
+        padding: 0.6rem 0rem;
+        color: rgb(255, 255, 255);
+        font: normal bolder 1.1rem "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
+        transition: color 0.3s linear;
+      }
+    }
+  }
+
+  #closebox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    height: 30px;
+    width: 30px;
+    display: block;
+    background: url(../images/close.png);
+    background-size: contain;
+    z-index: 1500;
+  }
+}
+
+@media screen and (max-width: 1026px) {
+  #container {
+    #home {
+      background-size: cover;
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  .navheadside {
+    nav {
+      a {
+        text-align: center;
+        padding: 0.9rem 0.6rem;
+        width: 150px;
+        font: normal bolder 0.9rem "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 890px) {
+  #container {
+    #home {
+      background-size: cover;
+      display: grid;
+      margin: auto;
+      h1 {
+        font-size: 4.1rem;
+        align-self: center;
+      }
+      #homepara {
+        max-width: 58%;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #container {
+    #home {
+      background-size: cover;
+      h1 {
+        font-size: 2.6rem;
+      }
+      #homepara {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+    #two,
+    #three {
+      section {
+        p {
+          padding: 1rem 0rem;
+          font: normal normal 1rem "Times New Roman", "sans-serif";
+          word-break: break-all;
+          color: rgb(66, 62, 62);
+          line-height: 25px;
+        }
+      }
+    }
+    #five {
+      header {
+        p {
+          i {
+            color: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+      form {
+        width: 60%;
+        margin: 4rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        textarea,
+        input {
+          padding: 0.6rem;
+          font-size: 1rem;
+          margin-top: 1rem;
+          border-radius: 0.5rem;
+          font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+          border: 1px solid $themecol;
+          &:focus {
+            outline: 2px solid $themecol;
+            outline-offset: 2px;
+          }
+        }
+        textarea {
+          height: 100px;
+        }
+        input[type="submit"] {
+          color: white;
+          background-color: $themecol;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 592px) {
+  #container {
+    #home {
+      background-size: cover;
+      h1 {
+        font-size: 2.7rem;
+      }
+    }
+
+    #four {
+      figure {
+        overflow-x: auto;
+        table {
+          th {
+            font-size: 1.1rem;
+            padding: 0.6rem 1rem;
+          }
+          td {
+            padding: 0.6rem 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #five {
+    form {
+      width: 85%;
+    }
+  }
+
+  #six {
+    display: grid;
+    align-items: center;
+    .logos {
+      a {
+        height: 80px;
+        width: 80px;
+        img {
+          height: 80px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #container {
+    #home {
+      h1 {
+        font-size: 2.6rem;
+      }
+      #homepara {
+        max-width: 70%;
+        p {
+          width: 100%;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .rest {
+      width: 92%;
+      padding: 5rem 1rem;
+      margin: auto;
+      text-align: center;
+      header {
+        h2 {
+          font: normal bolder 1.4rem "Times New Roman", "sans-serif";
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #container {
+    #home {
+      h1 {
+        font-size: 2.6rem;
+      }
+      #homepara {
+        max-width: 80%;
+        p {
+          width: 100%;
+          font-size: 1.3rem;
+        }
+      }
+
+      .rest {
+        width: 92%;
+        padding: 5rem 1rem;
+        margin: auto;
+        text-align: center;
+        header {
+          h2 {
+            font: normal bolder 1rem "Times New Roman", "sans-serif";
+          }
+        }
+      }
+
+      #two,
+      #three {
+        section{
+          p {
+            font: normal normal 1rem "Times New Roman", "sans-serif";
+          }
+        }
+      }
+
+      #five {
+        form {
+          width: 90%;
+        }
+      }
+
+      #six {
+        .logos {
+          a {
+            height: 50px;
+            width: 50px;
+            img {
+              height: 50px;
+              width: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 280px) {
+    #container {
+      #homepara {
+        max-width: 80%;
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
